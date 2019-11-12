@@ -12,11 +12,6 @@
 
 (function() {
 
-    var age = prompt("How old are you?");
-    var gender = prompt("Male / Female?");
-    var town = prompt("Where do you live?");
-
-    var confirmation = confirm(`is your age ${age}, your gender ${gender} and town ${town}`);
 
     while (confirmation !== true) {
         var age = prompt("How old are you?");
