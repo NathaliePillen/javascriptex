@@ -9,100 +9,38 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-function test() {
-    return true;
-}
+var num1 = document.getElementById("op-one");
+var num2 = document.getElementById("op-two");
+var operators = document.querySelector(".actions");
+console.log(operators);
 
 
+operators.addEventListener(("click"), function(event) {
+    console.log(event);
+    var result;
+    switch (event.target.id) {
+        case "addition":
+            result = Number(num1.value) + Number(num2.value);
+            console.log(result);
+            break;
+        case "substraction":
+            result = Number(num1.value) - Number(num2.value);
+            console.log(result);
+            break;
+        case "multiplication":
+            result = Number(num1.value) * Number(num2.value);
+            console.log(result);
+            break;
+        case "division":
+            result = Number(num1.value) / Number(num2.value);
+            console.log(result);
+            break;
+        default:
+            alert("Dit is een error!!")
+            break;
+    }
 
-(function() {
-    return true;
-})();
+    displayresult = document.getElementById("result");
+    displayresult.value = result;
 
-switch (ch) {
-    case 1:
-        d = a + b + c;
-        System.out.println("The result is " + d);
-        break;
-    case 2:
-        d = a * b * c;
-        System.out.println("The result is " + d);
-        break;
-    case 3:
-        d = a - b - c;
-        System.out.println(" The result is" + d);
-        break;
-    case 4:
-        d = a + b + c / 2;
-        System.out.println("The result is " + d);
-        break;
-    default:
-        System.out.println(" Oops! wrong choice");
-        break;
-}
-}
-
-
-document.getElementById("demo").innerHTML = "Today is " + day;
-
-document.getElementById("addition").addEventListener("click", function() {
-    number1 = document.getElementById("op-one");
-    number2 = document.getElementById("op-two");
-
-    operator = parseInt(number1.value) + parseInt(number2.value);
-
-    console.log(operator);
-
-
-    result = document.getElementById("result");
-    result.innerText = operator;
-
-
-    // perform an addition
-});
-
-document.getElementById("substraction").addEventListener("click", function() {
-
-    number1 = document.getElementById("op-one");
-    number2 = document.getElementById("op-two");
-
-    operator = parseInt(number1.value) - parseInt(number2.value);
-
-    console.log(operator);
-
-
-    result = document.getElementById("result");
-    result.innerText = operator;
-    // perform an substraction
-});
-
-document.getElementById("multiplication").addEventListener("click", function() {
-
-    number1 = document.getElementById("op-one");
-    number2 = document.getElementById("op-two");
-
-    operator = parseInt(number1.value) * parseInt(number2.value);
-
-    console.log(operator);
-
-
-    result = document.getElementById("result");
-    // result.setAttribute("value", operator);
-    result.value = operator;
-    console.log("howdie partner!");
-    // perform an multiplication
-});
-
-document.getElementById("division").addEventListener("click", function() {
-
-    number1 = document.getElementById("op-one");
-    number2 = document.getElementById("op-two");
-
-    operator = parseInt(number1.value) / parseInt(number2.value);
-
-    console.log(operator);
-
-    result = document.getElementById("result");
-    result.innerText = operator;
-    // perform an division
-});
+})
