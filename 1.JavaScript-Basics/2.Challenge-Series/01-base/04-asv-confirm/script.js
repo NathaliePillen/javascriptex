@@ -7,7 +7,8 @@
  */
 
 // NOTE: don't focus on the existing code structure for now.
-// You will have time to focus on it later.
+// You will have time to focus on it later
+
 
 (function() {
 
@@ -15,10 +16,14 @@
     var gender = prompt("Male / Female?");
     var town = prompt("Where do you live?");
 
-    if (confirm("Please confirm.")) {
-        alert("Thank you!");
-    } else {
-        alert("How old are you?");
+    var confirmation = confirm(`is your age ${age}, your gender ${gender} and town ${town}`);
+
+    while (confirmation !== true) {
+        var age = prompt("How old are you?");
+        var gender = prompt("Male / Female?");
+        var town = prompt("Where do you live?");
+
+        var confirmation = confirm(`is your age ${age}, your gender ${gender} and town ${town}`);
     }
 
 })();
