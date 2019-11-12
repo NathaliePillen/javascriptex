@@ -22,8 +22,8 @@
 
 
         result = document.getElementById("result");
-        result.innerText = operator;
-
+        // result.setAttribute("value", operator);
+        result.value = operator;
 
         // perform an addition
     });
@@ -39,7 +39,8 @@
 
 
         result = document.getElementById("result");
-        result.innerText = operator;
+        // result.setAttribute("value", operator);
+        result.value = operator;
         // perform an substraction
     });
 
@@ -56,7 +57,6 @@
         result = document.getElementById("result");
         // result.setAttribute("value", operator);
         result.value = operator;
-        console.log("howdie partner!");
         // perform an multiplication
     });
 
@@ -70,7 +70,8 @@
         console.log(operator);
 
         result = document.getElementById("result");
-        result.innerText = operator;
+        // result.setAttribute("value", operator);
+        result.value = operator;
         // perform an division
     });
 })();
