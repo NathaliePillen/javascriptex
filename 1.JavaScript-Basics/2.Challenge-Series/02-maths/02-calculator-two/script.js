@@ -9,9 +9,9 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-var num1 = document.getElementById("op-one");
-var num2 = document.getElementById("op-two");
-var operators = document.querySelector(".actions");
+let num1 = document.getElementById("op-one");
+let num2 = document.getElementById("op-two");
+let operators = document.querySelector(".actions");
 console.log(operators);
 
 
@@ -39,8 +39,12 @@ operators.addEventListener(("click"), function(event) {
             alert("Dit is een error!!")
             break;
     }
+    // code needed whith label-tag
+    //let displayresult = document.getElementById("result");
+    //displayresult.value = result;
 
-    displayresult = document.getElementById("result");
-    displayresult.value = result;
+    //document.getElementById('resultlabel').textContent = result;
+
+    document.getElementById("resultlabel").innerHTML = result;
 
 })
