@@ -14,23 +14,24 @@
     // to get the value of an input: document.getElementById("element-id").value
 
     document.getElementById("run").addEventListener("click", function() {
-        var array1 = [numbers.value];
-        console.log(array1);
-        document.getElementById("numbers").innerHTML = array1;
-        console.log(array1);
+        let listNumbers = numbers.value;
+        console.log(listNumbers);
+        let array2 = listNumbers.split(', ');
+        console.log(array2);
 
-        function myFunction() {
-            array1.sort(function(a, b) {
-                return a - b
-            });
-            console.log(array1);
-            document.getElementById("numbers").innerHTML = array1;
-        }
-
+        array2.sort(function(a, b) {
+            return a - b
+        });
+        console.log(array2);
+        document.getElementById("numbers").value = array2;
+        console.log(document.querySelector("#numbers"));
+        //document.getElementById("numbers").innerHTML = array2;
 
         // your code here
 
 
     });
+
+
 
 })();
