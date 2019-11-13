@@ -9,8 +9,37 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
 
-    // your code here
 
-})();
+
+document.getElementById("red").style.backgroundColor = "red";
+document.getElementById("green").style.backgroundColor = "green";
+document.getElementById("yellow").style.backgroundColor = "yellow";
+document.getElementById("blue").style.backgroundColor = "blue";
+
+
+
+var chooseColor = document.querySelector(".actions");
+console.log(chooseColor);
+chooseColor.addEventListener(("click"), function(event) {
+    console.log(event);
+    var color;
+    switch (event.target.id) {
+        case "red":
+            document.body.style.backgroundColor = "red";
+            break;
+        case "green":
+            document.body.style.backgroundColor = "green";
+            break;
+        case "yellow":
+            document.body.style.backgroundColor = "yellow";
+            break;
+        case "blue":
+            document.body.style.backgroundColor = "blue";
+            break;
+        default:
+            alert("Dit is een error!!")
+            break;
+
+    }
+})
