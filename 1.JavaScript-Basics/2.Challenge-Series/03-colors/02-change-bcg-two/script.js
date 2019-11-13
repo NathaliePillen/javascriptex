@@ -11,6 +11,21 @@
 
 (function() {
 
-    // your code here
+
+    var chooseColor = document.querySelector("#color");
+    console.log(chooseColor);
+
+    var pressButton = document.querySelector("#run");
+    console.log(pressButton);
+
+    pressButton.addEventListener(("click"), function() {
+        document.body.style.backgroundColor = chooseColor.value;
+    })
+
+
+
+
+
+
 
 })();
