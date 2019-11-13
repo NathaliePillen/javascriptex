@@ -11,6 +11,18 @@
 
 (function() {
 
+    var currentDate = new Date();
+    console.log(currentDate);
+    var currentTime = currentDate.toLocaleTimeString();
+    console.log(currentTime);
+
+
+    if (currentTime > "17:30:00 PM") {
+        document.getElementById("target").innerHTML = "Good evening";
+    } else {
+        document.getElementById("target").innerHTML = "Hello";
+    }
+
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
 
     // your code here
