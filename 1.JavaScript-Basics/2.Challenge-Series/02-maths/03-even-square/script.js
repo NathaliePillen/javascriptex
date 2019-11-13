@@ -16,11 +16,14 @@ let pressButton = document.getElementById("run");
 
 pressButton.addEventListener(("click"), function() {
 
-    for (i = 1; i <= 21; i++) {
-        let sqNumbers = Math.ceil(Math.sqrt(i));
-        console.log(sqNumbers);
-        let text = "square number: " + sqNumbers + "<br>";
-        document.write(text);
+    for (var i = 1; i <= 21; i++) {
+        let sqNumbers = i * i;
+        if (sqNumbers <= 21) {
+            console.log(sqNumbers);
+        }
+
     }
+
+
 
 })
