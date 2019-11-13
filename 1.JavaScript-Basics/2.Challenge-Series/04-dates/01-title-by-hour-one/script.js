@@ -10,6 +10,19 @@
 // You will have time to focus on it later.
 
 (function() {
+    var currentDate = new Date();
+    console.log(currentDate);
+    var currentTime = currentDate.getHours();
+    console.log(currentTime);
+
+    if (currentTime < 18) {
+        document.getElementById("target").innerHTML = "Hello";
+    } else {
+        document.getElementById("target").innerHTML = "Good evening";
+    }
+
+
+
 
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
 
