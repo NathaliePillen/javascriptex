@@ -11,6 +11,12 @@
 
 (function() {
 
+    var currentDate = new Date();
+    console.log(currentDate);
+
+
+    document.getElementById("target").innerHTML = currentDate.toUTCString();
+
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
 
     // your code here
