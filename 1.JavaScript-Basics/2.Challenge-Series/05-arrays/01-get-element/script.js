@@ -26,6 +26,17 @@
         "cherry",
     ];
 
+    let calculate = document.getElementById("run");
+
+    calculate.addEventListener(("click"), function() {
+        let list4 = fruits[3];
+        console.log(list4);
+
+        document.getElementById("run").innerHTML = list4;
+
+    })
+
+
     // your code here
 
 })();

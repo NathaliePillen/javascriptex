@@ -11,6 +11,40 @@
 
 (function() {
 
+    let year = document.getElementById("year");
+    console.log(year);
+
+    let calculate = document.getElementById("run");
+    console.log(calculate);
+
+    calculate.addEventListener(("click"), function() {
+
+        //vraag de dagen op van dit specifiek jaar
+        let currentDate = new Date();
+        console.log(currentDate);
+
+
+        currentDate.setFullYear(year.value);
+        console.log(currentDate);
+
+        let month = currentDate.getMonth();
+        console.log(month);
+        let day = currentDate.getDay();
+        console.log(day);
+
+        for (var i = 0; i <= 11; i++) {
+            let date = currentDate.getDate(currentDate, month, 13);
+            if (day == 5) {
+                alert("hello");
+            }
+        }
+
+
+
+    })
+
+
+
     // your code here
 
 })();
