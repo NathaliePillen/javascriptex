@@ -30,39 +30,34 @@
     let calculateAge = document.getElementById("run");
     console.log(calculateAge);
 
-    let age = "calculate age";
-
     calculateAge.addEventListener(("click"), function() {
 
-        age = currentYear - birthYear.value;
-        console.log(age);
+        let age;
 
-        if (currentMonth < (birthMonth.value)) {
-            age;
+
+        if (birthMonth.value < currentMonth) {
+            age = currentYear - birthYear.value;
+            console.log(age);
+            document.getElementById("run").innerHTML = age;
         }
 
-        if (((birthMonth - 1) == currentMonth) && (currentDay < birthDay)) {
-            age;
+
+        if (birthMonth.value == currentMonth && birthDay.value < currentDay) {
+            age = (currentYear - 1) - birthYear.value;
+            console.log(age);
+            document.getElementById("run").innerHTML = age;
         }
+
+        if (birthMonth.value > currentMonth) {
+            age = (currentYear - 1) - birthYear.value;
+            console.log(age);
+            document.getElementById("run").innerHTML = age;
+        }
+
 
 
     })
 
-    document.getElementById("run").innerHTML = age;
-
-
-
-
-    // if (today_month < (birth_month - 1)) {
-    //     age--;
-    // }
-    //if (((birth_month - 1) == today_month) && (today_day < birth_day)) {
-    //    age--;
-    //}
-    //return age;
-
-
-
-    // your code here
+    // your code here*/
 
 })();
