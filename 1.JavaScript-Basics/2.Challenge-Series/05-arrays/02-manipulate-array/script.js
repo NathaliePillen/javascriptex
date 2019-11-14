@@ -24,6 +24,25 @@
         "cerise",
     ];
 
-    // your code here
+    console.log(fruits);
+    let calculate = document.getElementById("run");
+
+    calculate.addEventListener(("click"), function() {
+
+            let removeEnd = fruits.pop();
+            console.log(removeEnd);
+
+            let removeStart = fruits.shift();
+            console.log(removeStart);
+            console.log(fruits);
+
+            let addStart = fruits.unshift("Banana");
+            let addEnd = fruits.push("kiwi");
+
+
+            document.getElementById("run").innerHTML = fruits;
+
+        })
+        // your code here
 
 })();
