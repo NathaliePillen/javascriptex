@@ -31,14 +31,16 @@
     calculate.addEventListener(("click"), function() {
 
 
-            fruits.forEach(function(item) {
+            /*fruits.forEach(function(item) {
                 console.log(item);
-            });
-            /*
-              var i;
-              for (i = 0; i < fruits.length; i++) {
-                  console.log(fruits[0]);
-              }*/
+            });*/
+
+
+            for (let i = 0; i < fruits.length; i++) {
+                console.log(fruits[i]);
+            }
+
+
 
 
         })

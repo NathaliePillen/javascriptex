@@ -26,6 +26,17 @@
         "cerise",
     ];
 
+    let calculate = document.getElementById("run");
+
+    calculate.addEventListener(("click"), function() {
+
+        fruits.forEach(function(item) {
+            console.log(item);
+        });
+
+
+    })
+
     // your code here
 
 })();
