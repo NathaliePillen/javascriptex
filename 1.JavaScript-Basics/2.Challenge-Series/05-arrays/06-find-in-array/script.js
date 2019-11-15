@@ -11,8 +11,7 @@
 
 (function() {
 
-    var people = [
-        {
+    var people = [{
             firstname: "Bradford",
             lastname: "Coldbath",
             email: "bcoldbath0@wired.com",
@@ -89,6 +88,18 @@
         },
     ];
 
-    // your code here
+    let calculate = document.getElementById("run");
+
+    calculate.addEventListener(("click"), function() {
+
+        people.forEach(function(item, index) {
+            if (item.firstname === "Jean" && item.lastname === "Dupont") {
+                console.log(item.email, index)
+            };
+
+
+
+        })
+    });
 
 })();

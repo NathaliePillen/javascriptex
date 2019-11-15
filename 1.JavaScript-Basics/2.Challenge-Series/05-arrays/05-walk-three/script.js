@@ -11,8 +11,7 @@
 
 (function() {
 
-    var people = [
-        {
+    var people = [{
             firstname: "Garald",
             lastname: "Freschi",
             email: "gfreschi0@discuz.net",
@@ -39,6 +38,16 @@
         },
     ];
 
-    // your code here
+    let calculate = document.getElementById("run");
+
+
+    calculate.addEventListener(("click"), function() {
+
+            people.forEach(function(item) {
+                console.log(item.firstname + " " + item.lastname);
+            });
+
+        })
+        // your code here
 
 })();
