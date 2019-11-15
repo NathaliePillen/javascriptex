@@ -11,8 +11,7 @@
 
 (function() {
 
-    var people = [
-        {
+    var people = [{
             firstname: "Dreddy",
             lastname: "Nussgen",
             age: 70,
@@ -88,6 +87,46 @@
             age: 81,
         },
     ];
+
+
+    let calculate = document.getElementById("run");
+    var newArray = [];
+
+    calculate.addEventListener(("click"), function() {
+
+        people.forEach(function(item) {
+            if (item.age > 18) {
+                newArray.push(item);
+            };
+        });
+
+        console.log(newArray);
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // your code here
 
